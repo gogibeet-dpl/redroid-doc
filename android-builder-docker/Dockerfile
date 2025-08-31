@@ -1,8 +1,8 @@
 FROM ubuntu:20.04
 
-ARG userid
-ARG groupid
-ARG username
+ARG userid=1000
+ARG groupid=1000
+ARG username=builder
 
 # COPY apt.conf /etc/apt/apt.conf
 
