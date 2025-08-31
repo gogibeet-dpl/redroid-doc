@@ -1,0 +1,11 @@
+services:
+  aosp:
+    build:
+      context: .              # Dockerfile лежит рядом
+      dockerfile: Dockerfile  # если имя другое — укажи тут
+      args:
+        userid: "${UID}"
+        groupid: "${GID}"
+        username: "${USERNAME}"
+    volumes:
+      - /mnt/storage/Android:/srv
