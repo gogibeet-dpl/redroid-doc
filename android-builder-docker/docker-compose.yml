@@ -5,3 +5,7 @@ services:
       dockerfile: Dockerfile  # если имя другое — укажи тут
     volumes:
       - /mnt/storage/Android:/srv
+    command: tail -f /dev/null   # держим контейнер живым
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
